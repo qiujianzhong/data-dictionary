@@ -1,0 +1,2405 @@
+
+<!-- saved from url=(0022)http://localhost:8000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mysql-Data-Dictionary</title>
+<style>
+table{ border-collapse:collapse;border:1px solid #CCC;background:#efefef;width:100%; margin-bottom:1em;}
+table th{ text-align:left; font-weight:bold; padding:.5em 2em .5em .75em; line-height:1.6em; font-size:12px; border:1px solid #CCC;}
+table td{ padding:.5em .75em; line-height:1.6em; font-size:12px; border:1px solid #CCC;background-color:#fff;}
+.c1{ width: 150px;}
+.c2{ width: 120px;}
+.c3{ width: 130px;}
+.c4{ width: 130px;}
+caption{ font-size:14px; font-weight:bold; line-height:2em; text-align:left; }
+a {text-decoration: none;color: #CCC;}
+</style>
+</head><body><center>
+<h2 style="color: gold;">mysql</h2>
+</center>
+<a name="__top__"></a><table><caption style="color: #CCC;">show tables</caption><tbody><tr><td class="c3"><a href="http://localhost:8000/#columns_priv">columns_priv</a></td><td class="c3"><a href="http://localhost:8000/#db">db</a></td><td class="c3"><a href="http://localhost:8000/#event">event</a></td><td class="c3"><a href="http://localhost:8000/#func">func</a></td><td class="c3"><a href="http://localhost:8000/#general_log">general_log</a></td></tr><tr><td class="c3"><a href="http://localhost:8000/#help_category">help_category</a></td><td class="c3"><a href="http://localhost:8000/#help_keyword">help_keyword</a></td><td class="c3"><a href="http://localhost:8000/#help_relation">help_relation</a></td><td class="c3"><a href="http://localhost:8000/#help_topic">help_topic</a></td><td class="c3"><a href="http://localhost:8000/#innodb_index_stats">innodb_index_stats</a></td></tr><tr><td class="c3"><a href="http://localhost:8000/#innodb_table_stats">innodb_table_stats</a></td><td class="c3"><a href="http://localhost:8000/#ndb_binlog_index">ndb_binlog_index</a></td><td class="c3"><a href="http://localhost:8000/#plugin">plugin</a></td><td class="c3"><a href="http://localhost:8000/#proc">proc</a></td><td class="c3"><a href="http://localhost:8000/#procs_priv">procs_priv</a></td></tr><tr><td class="c3"><a href="http://localhost:8000/#proxies_priv">proxies_priv</a></td><td class="c3"><a href="http://localhost:8000/#servers">servers</a></td><td class="c3"><a href="http://localhost:8000/#slave_master_info">slave_master_info</a></td><td class="c3"><a href="http://localhost:8000/#slave_relay_log_info">slave_relay_log_info</a></td><td class="c3"><a href="http://localhost:8000/#slave_worker_info">slave_worker_info</a></td></tr><tr><td class="c3"><a href="http://localhost:8000/#slow_log">slow_log</a></td><td class="c3"><a href="http://localhost:8000/#tables_priv">tables_priv</a></td><td class="c3"><a href="http://localhost:8000/#time_zone">time_zone</a></td><td class="c3"><a href="http://localhost:8000/#time_zone_leap_second">time_zone_leap_second</a></td><td class="c3"><a href="http://localhost:8000/#time_zone_name">time_zone_name</a></td></tr><tr><td class="c3"><a href="http://localhost:8000/#time_zone_transition">time_zone_transition</a></td><td class="c3"><a href="http://localhost:8000/#time_zone_transition_type">time_zone_transition_type</a></td><td class="c3"><a href="http://localhost:8000/#user">user</a></td></tr></tbody></table>
+<a name="columns_priv"></a><table><caption>columns_priv(Column privileges | 翻译: 列的特权)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">Db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Db</td>
+		</tr><tr>
+		<td class="c1">User</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户</td>
+		</tr><tr>
+		<td class="c1">Table_name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">表名</td>
+		</tr><tr>
+		<td class="c1">Column_name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">列名</td>
+		</tr><tr>
+		<td class="c1">Timestamp</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时间戳</td>
+		</tr><tr>
+		<td class="c1">Column_priv</td>
+		<td class="c2">set('Select','Insert','Update','References')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">列priv</td>
+		</tr></tbody></table><a name="db"></a><table><caption>db(Database privileges | 翻译: 数据库权限)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">Db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Db</td>
+		</tr><tr>
+		<td class="c1">User</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户</td>
+		</tr><tr>
+		<td class="c1">Select_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">选择我感到</td>
+		</tr><tr>
+		<td class="c1">Insert_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">插入priv</td>
+		</tr><tr>
+		<td class="c1">Update_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">更新我感到</td>
+		</tr><tr>
+		<td class="c1">Delete_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">删除我感到</td>
+		</tr><tr>
+		<td class="c1">Create_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建priv</td>
+		</tr><tr>
+		<td class="c1">Drop_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">我感到下降</td>
+		</tr><tr>
+		<td class="c1">Grant_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">格兰特priv</td>
+		</tr><tr>
+		<td class="c1">References_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">引用我感到</td>
+		</tr><tr>
+		<td class="c1">Index_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">指数priv</td>
+		</tr><tr>
+		<td class="c1">Alter_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">改变我感到</td>
+		</tr><tr>
+		<td class="c1">Create_tmp_table_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建tmp表priv</td>
+		</tr><tr>
+		<td class="c1">Lock_tables_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">锁表priv</td>
+		</tr><tr>
+		<td class="c1">Create_view_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建视图priv</td>
+		</tr><tr>
+		<td class="c1">Show_view_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">显示视图priv</td>
+		</tr><tr>
+		<td class="c1">Create_routine_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建常规priv</td>
+		</tr><tr>
+		<td class="c1">Alter_routine_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">改变常规priv</td>
+		</tr><tr>
+		<td class="c1">Execute_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">我感到执行</td>
+		</tr><tr>
+		<td class="c1">Event_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">事件我感到</td>
+		</tr><tr>
+		<td class="c1">Trigger_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">触发我感到</td>
+		</tr></tbody></table><a name="event"></a><table><caption>event(Events)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">db</td>
+		</tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">body</td>
+		<td class="c2">longblob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">身体</td>
+		</tr><tr>
+		<td class="c1">definer</td>
+		<td class="c2">char(77)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">定义者</td>
+		</tr><tr>
+		<td class="c1">execute_at</td>
+		<td class="c2">datetime</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">执行</td>
+		</tr><tr>
+		<td class="c1">interval_value</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">区间值</td>
+		</tr><tr>
+		<td class="c1">interval_field</td>
+		<td class="c2">enum('YEAR','QUARTER','MONTH','DAY','HOUR','MINUTE','WEEK','SECOND','MICROSECOND','YEAR_MONTH','DAY_HOUR','DAY_MINUTE','DAY_SECOND','HOUR_MINUTE','HOUR_SECOND','MINUTE_SECOND','DAY_MICROSECOND','HOUR_MICROSECOND','MINUTE_MICROSECOND','SECOND_MICROSECOND')</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">间隔场</td>
+		</tr><tr>
+		<td class="c1">created</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建</td>
+		</tr><tr>
+		<td class="c1">modified</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">0000-00-00 00:00:00</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">修改</td>
+		</tr><tr>
+		<td class="c1">last_executed</td>
+		<td class="c2">datetime</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最后执行</td>
+		</tr><tr>
+		<td class="c1">starts</td>
+		<td class="c2">datetime</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">开始</td>
+		</tr><tr>
+		<td class="c1">ends</td>
+		<td class="c2">datetime</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">结束</td>
+		</tr><tr>
+		<td class="c1">status</td>
+		<td class="c2">enum('ENABLED','DISABLED','SLAVESIDE_DISABLED')</td>
+		<td class="c2">NO</td>
+		<td class="c3">ENABLED</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">状态</td>
+		</tr><tr>
+		<td class="c1">on_completion</td>
+		<td class="c2">enum('DROP','PRESERVE')</td>
+		<td class="c2">NO</td>
+		<td class="c3">DROP</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">在完成</td>
+		</tr><tr>
+		<td class="c1">sql_mode</td>
+		<td class="c2">set('REAL_AS_FLOAT','PIPES_AS_CONCAT','ANSI_QUOTES','IGNORE_SPACE','NOT_USED','ONLY_FULL_GROUP_BY','NO_UNSIGNED_SUBTRACTION','NO_DIR_IN_CREATE','POSTGRESQL','ORACLE','MSSQL','DB2','MAXDB','NO_KEY_OPTIONS','NO_TABLE_OPTIONS','NO_FIELD_OPTIONS','MYSQL323','MYSQL40','ANSI','NO_AUTO_VALUE_ON_ZERO','NO_BACKSLASH_ESCAPES','STRICT_TRANS_TABLES','STRICT_ALL_TABLES','NO_ZERO_IN_DATE','NO_ZERO_DATE','INVALID_DATES','ERROR_FOR_DIVISION_BY_ZERO','TRADITIONAL','NO_AUTO_CREATE_USER','HIGH_NOT_PRECEDENCE','NO_ENGINE_SUBSTITUTION','PAD_CHAR_TO_FULL_LENGTH')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">sql模式</td>
+		</tr><tr>
+		<td class="c1">comment</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">评论</td>
+		</tr><tr>
+		<td class="c1">originator</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">发起者</td>
+		</tr><tr>
+		<td class="c1">time_zone</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3">SYSTEM</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时区</td>
+		</tr><tr>
+		<td class="c1">character_set_client</td>
+		<td class="c2">char(32)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">字符集的客户</td>
+		</tr><tr>
+		<td class="c1">collation_connection</td>
+		<td class="c2">char(32)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">整理连接</td>
+		</tr><tr>
+		<td class="c1">db_collation</td>
+		<td class="c2">char(32)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">db排序</td>
+		</tr><tr>
+		<td class="c1">body_utf8</td>
+		<td class="c2">longblob</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">身体utf8</td>
+		</tr></tbody></table><a name="func"></a><table><caption>func(User defined functions | 翻译: 用户定义函数)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">ret</td>
+		<td class="c2">tinyint(1)</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">受潮湿腐烂</td>
+		</tr><tr>
+		<td class="c1">dl</td>
+		<td class="c2">char(128)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">戴斯。莱纳姆:</td>
+		</tr><tr>
+		<td class="c1">type</td>
+		<td class="c2">enum('function','aggregate')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">类型</td>
+		</tr></tbody></table><a name="general_log"></a><table><caption>general_log(General log | 翻译: 通用日志)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">event_time</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">事件时间</td>
+		</tr><tr>
+		<td class="c1">user_host</td>
+		<td class="c2">mediumtext</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户主机</td>
+		</tr><tr>
+		<td class="c1">thread_id</td>
+		<td class="c2">bigint(21) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">线程id</td>
+		</tr><tr>
+		<td class="c1">server_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">服务器id</td>
+		</tr><tr>
+		<td class="c1">command_type</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">命令类型</td>
+		</tr><tr>
+		<td class="c1">argument</td>
+		<td class="c2">mediumtext</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">论点</td>
+		</tr></tbody></table><a name="help_category"></a><table><caption>help_category(help categories | 翻译: 帮助类别)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">help_category_id</td>
+		<td class="c2">smallint(5) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">帮助类别id</td>
+		</tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">UNI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">parent_category_id</td>
+		<td class="c2">smallint(5) unsigned</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">父类别id</td>
+		</tr><tr>
+		<td class="c1">url</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">url</td>
+		</tr></tbody></table><a name="help_keyword"></a><table><caption>help_keyword(help keywords | 翻译: 帮助关键字)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">help_keyword_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">帮助关键字标识</td>
+		</tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">UNI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr></tbody></table><a name="help_relation"></a><table><caption>help_relation(keyword-topic relation | 翻译: keyword-topic关系)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">help_topic_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">帮助主题id</td>
+		</tr><tr>
+		<td class="c1">help_keyword_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">帮助关键字标识</td>
+		</tr></tbody></table><a name="help_topic"></a><table><caption>help_topic(help topics | 翻译: 帮助主题)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">help_topic_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">帮助主题id</td>
+		</tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">UNI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">help_category_id</td>
+		<td class="c2">smallint(5) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">帮助类别id</td>
+		</tr><tr>
+		<td class="c1">description</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">描述</td>
+		</tr><tr>
+		<td class="c1">example</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">例子</td>
+		</tr><tr>
+		<td class="c1">url</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">url</td>
+		</tr></tbody></table><a name="innodb_index_stats"></a><table><caption>innodb_index_stats( | 翻译: innodb_index_stats)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">database_name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">数据库名称</td>
+		</tr><tr>
+		<td class="c1">table_name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">表名</td>
+		</tr><tr>
+		<td class="c1">index_name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">索引名称</td>
+		</tr><tr>
+		<td class="c1">last_update</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最后一次更新</td>
+		</tr><tr>
+		<td class="c1">stat_name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">属性名称</td>
+		</tr><tr>
+		<td class="c1">stat_value</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">统计值</td>
+		</tr><tr>
+		<td class="c1">sample_size</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">样本大小</td>
+		</tr><tr>
+		<td class="c1">stat_description</td>
+		<td class="c2">varchar(1024)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">统计描述</td>
+		</tr></tbody></table><a name="innodb_table_stats"></a><table><caption>innodb_table_stats( | 翻译: innodb_table_stats)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">database_name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">数据库名称</td>
+		</tr><tr>
+		<td class="c1">table_name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">表名</td>
+		</tr><tr>
+		<td class="c1">last_update</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最后一次更新</td>
+		</tr><tr>
+		<td class="c1">n_rows</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">n行</td>
+		</tr><tr>
+		<td class="c1">clustered_index_size</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">聚集索引的大小</td>
+		</tr><tr>
+		<td class="c1">sum_of_other_index_sizes</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">其他指数大小的总和</td>
+		</tr></tbody></table><a name="ndb_binlog_index"></a><table><caption>ndb_binlog_index( | 翻译: ndb_binlog_index)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Position</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">位置</td>
+		</tr><tr>
+		<td class="c1">File</td>
+		<td class="c2">varchar(255)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">文件</td>
+		</tr><tr>
+		<td class="c1">epoch</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时代</td>
+		</tr><tr>
+		<td class="c1">inserts</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">插入</td>
+		</tr><tr>
+		<td class="c1">updates</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">更新</td>
+		</tr><tr>
+		<td class="c1">deletes</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">删除</td>
+		</tr><tr>
+		<td class="c1">schemaops</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">schemaops</td>
+		</tr><tr>
+		<td class="c1">orig_server_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">源自服务器id</td>
+		</tr><tr>
+		<td class="c1">orig_epoch</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">源自时代</td>
+		</tr><tr>
+		<td class="c1">gci</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">快</td>
+		</tr></tbody></table><a name="plugin"></a><table><caption>plugin(MySQL plugins | 翻译: MySQL插件)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">varchar(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">dl</td>
+		<td class="c2">varchar(128)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">戴斯。莱纳姆:</td>
+		</tr></tbody></table><a name="proc"></a><table><caption>proc(Stored Procedures | 翻译: 存储过程)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">db</td>
+		</tr><tr>
+		<td class="c1">name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">type</td>
+		<td class="c2">enum('FUNCTION','PROCEDURE')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">类型</td>
+		</tr><tr>
+		<td class="c1">specific_name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">具体的名字</td>
+		</tr><tr>
+		<td class="c1">language</td>
+		<td class="c2">enum('SQL')</td>
+		<td class="c2">NO</td>
+		<td class="c3">SQL</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">语言</td>
+		</tr><tr>
+		<td class="c1">sql_data_access</td>
+		<td class="c2">enum('CONTAINS_SQL','NO_SQL','READS_SQL_DATA','MODIFIES_SQL_DATA')</td>
+		<td class="c2">NO</td>
+		<td class="c3">CONTAINS_SQL</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">sql数据访问</td>
+		</tr><tr>
+		<td class="c1">is_deterministic</td>
+		<td class="c2">enum('YES','NO')</td>
+		<td class="c2">NO</td>
+		<td class="c3">NO</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">是确定的</td>
+		</tr><tr>
+		<td class="c1">security_type</td>
+		<td class="c2">enum('INVOKER','DEFINER')</td>
+		<td class="c2">NO</td>
+		<td class="c3">DEFINER</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">安全类型</td>
+		</tr><tr>
+		<td class="c1">param_list</td>
+		<td class="c2">blob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">参数列表</td>
+		</tr><tr>
+		<td class="c1">returns</td>
+		<td class="c2">longblob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">返回</td>
+		</tr><tr>
+		<td class="c1">body</td>
+		<td class="c2">longblob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">身体</td>
+		</tr><tr>
+		<td class="c1">definer</td>
+		<td class="c2">char(77)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">定义者</td>
+		</tr><tr>
+		<td class="c1">created</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建</td>
+		</tr><tr>
+		<td class="c1">modified</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">0000-00-00 00:00:00</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">修改</td>
+		</tr><tr>
+		<td class="c1">sql_mode</td>
+		<td class="c2">set('REAL_AS_FLOAT','PIPES_AS_CONCAT','ANSI_QUOTES','IGNORE_SPACE','NOT_USED','ONLY_FULL_GROUP_BY','NO_UNSIGNED_SUBTRACTION','NO_DIR_IN_CREATE','POSTGRESQL','ORACLE','MSSQL','DB2','MAXDB','NO_KEY_OPTIONS','NO_TABLE_OPTIONS','NO_FIELD_OPTIONS','MYSQL323','MYSQL40','ANSI','NO_AUTO_VALUE_ON_ZERO','NO_BACKSLASH_ESCAPES','STRICT_TRANS_TABLES','STRICT_ALL_TABLES','NO_ZERO_IN_DATE','NO_ZERO_DATE','INVALID_DATES','ERROR_FOR_DIVISION_BY_ZERO','TRADITIONAL','NO_AUTO_CREATE_USER','HIGH_NOT_PRECEDENCE','NO_ENGINE_SUBSTITUTION','PAD_CHAR_TO_FULL_LENGTH')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">sql模式</td>
+		</tr><tr>
+		<td class="c1">comment</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">评论</td>
+		</tr><tr>
+		<td class="c1">character_set_client</td>
+		<td class="c2">char(32)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">字符集的客户</td>
+		</tr><tr>
+		<td class="c1">collation_connection</td>
+		<td class="c2">char(32)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">整理连接</td>
+		</tr><tr>
+		<td class="c1">db_collation</td>
+		<td class="c2">char(32)</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">db排序</td>
+		</tr><tr>
+		<td class="c1">body_utf8</td>
+		<td class="c2">longblob</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">身体utf8</td>
+		</tr></tbody></table><a name="procs_priv"></a><table><caption>procs_priv(Procedure privileges | 翻译: 程序的特权)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">Db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Db</td>
+		</tr><tr>
+		<td class="c1">User</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户</td>
+		</tr><tr>
+		<td class="c1">Routine_name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">常规的名字</td>
+		</tr><tr>
+		<td class="c1">Routine_type</td>
+		<td class="c2">enum('FUNCTION','PROCEDURE')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">常规型</td>
+		</tr><tr>
+		<td class="c1">Grantor</td>
+		<td class="c2">char(77)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">MUL</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">委托人</td>
+		</tr><tr>
+		<td class="c1">Proc_priv</td>
+		<td class="c2">set('Execute','Alter Routine','Grant')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Proc priv</td>
+		</tr><tr>
+		<td class="c1">Timestamp</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时间戳</td>
+		</tr></tbody></table><a name="proxies_priv"></a><table><caption>proxies_priv(User proxy privileges | 翻译: 用户代理权限)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">User</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户</td>
+		</tr><tr>
+		<td class="c1">Proxied_host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">代理主机</td>
+		</tr><tr>
+		<td class="c1">Proxied_user</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">代理用户</td>
+		</tr><tr>
+		<td class="c1">With_grant</td>
+		<td class="c2">tinyint(1)</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">与格兰特</td>
+		</tr><tr>
+		<td class="c1">Grantor</td>
+		<td class="c2">char(77)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">MUL</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">委托人</td>
+		</tr><tr>
+		<td class="c1">Timestamp</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时间戳</td>
+		</tr></tbody></table><a name="servers"></a><table><caption>servers(MySQL Foreign Servers table | 翻译: MySQL外国服务器表)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Server_name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">服务器名称</td>
+		</tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">Db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Db</td>
+		</tr><tr>
+		<td class="c1">Username</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户名</td>
+		</tr><tr>
+		<td class="c1">Password</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">密码</td>
+		</tr><tr>
+		<td class="c1">Port</td>
+		<td class="c2">int(4)</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">港口</td>
+		</tr><tr>
+		<td class="c1">Socket</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">套接字</td>
+		</tr><tr>
+		<td class="c1">Wrapper</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">包装器</td>
+		</tr><tr>
+		<td class="c1">Owner</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">老板</td>
+		</tr></tbody></table><a name="slave_master_info"></a><table><caption>slave_master_info(Master Information | 翻译: 主信息)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Number_of_lines</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Number of lines in the file.</td>
+		<td class="c4 xd2">文件中的行数。</td>
+		</tr><tr>
+		<td class="c1">Master_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The name of the master binary log currently being read from the master.</td>
+		<td class="c4 xd2">掌握二进制日志的名字目前阅读的主人。</td>
+		</tr><tr>
+		<td class="c1">Master_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The master log position of the last read event.</td>
+		<td class="c4 xd2">主日志的位置最后读取事件。</td>
+		</tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The host name of the master.</td>
+		<td class="c4 xd2">的主机名的主人。</td>
+		</tr><tr>
+		<td class="c1">User_name</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The user name used to connect to the master.</td>
+		<td class="c4 xd2">用户名用于连接到主。</td>
+		</tr><tr>
+		<td class="c1">User_password</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The password used to connect to the master.</td>
+		<td class="c4 xd2">用于连接到主的密码。</td>
+		</tr><tr>
+		<td class="c1">Port</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The network port used to connect to the master.</td>
+		<td class="c4 xd2">网络端口用于连接到主。</td>
+		</tr><tr>
+		<td class="c1">Connect_retry</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The period (in seconds) that the slave will wait before trying to reconnect to the master.</td>
+		<td class="c4 xd2">这段时间(以秒为单位),奴隶将试图重新连接到主前等候。</td>
+		</tr><tr>
+		<td class="c1">Enabled_ssl</td>
+		<td class="c2">tinyint(1)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Indicates whether the server supports SSL connections.</td>
+		<td class="c4 xd2">表示服务器是否支持SSL连接。</td>
+		</tr><tr>
+		<td class="c1">Ssl_ca</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The file used for the Certificate Authority (CA) certificate.</td>
+		<td class="c4 xd2">使用的文件证书颁发机构(CA)证书。</td>
+		</tr><tr>
+		<td class="c1">Ssl_capath</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The path to the Certificate Authority (CA) certificates.</td>
+		<td class="c4 xd2">证书颁发机构(CA)证书的路径。</td>
+		</tr><tr>
+		<td class="c1">Ssl_cert</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The name of the SSL certificate file.</td>
+		<td class="c4 xd2">SSL证书文件的名称。</td>
+		</tr><tr>
+		<td class="c1">Ssl_cipher</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The name of the cipher in use for the SSL connection.</td>
+		<td class="c4 xd2">的名称密码使用了SSL连接。</td>
+		</tr><tr>
+		<td class="c1">Ssl_key</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The name of the SSL key file.</td>
+		<td class="c4 xd2">SSL密钥文件的名称。</td>
+		</tr><tr>
+		<td class="c1">Ssl_verify_server_cert</td>
+		<td class="c2">tinyint(1)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Whether to verify the server certificate.</td>
+		<td class="c4 xd2">是否验证服务器证书。</td>
+		</tr><tr>
+		<td class="c1">Heartbeat</td>
+		<td class="c2">float</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">心跳</td>
+		</tr><tr>
+		<td class="c1">Bind</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Displays which interface is employed when connecting to the MySQL server</td>
+		<td class="c4 xd2">显示时采用接口连接到MySQL服务器</td>
+		</tr><tr>
+		<td class="c1">Ignored_server_ids</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The number of server IDs to be ignored, followed by the actual server IDs</td>
+		<td class="c4 xd2">IDs服务器的数量被忽略,紧随其后的是实际的服务器id</td>
+		</tr><tr>
+		<td class="c1">Uuid</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The master server uuid.</td>
+		<td class="c4 xd2">主服务器uuid。</td>
+		</tr><tr>
+		<td class="c1">Retry_count</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Number of reconnect attempts, to the master, before giving up.</td>
+		<td class="c4 xd2">数量的连接尝试,到主,然后放弃。</td>
+		</tr><tr>
+		<td class="c1">Ssl_crl</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The file used for the Certificate Revocation List (CRL)</td>
+		<td class="c4 xd2">使用的文件证书撤销列表(CRL)</td>
+		</tr><tr>
+		<td class="c1">Ssl_crlpath</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The path used for Certificate Revocation List (CRL) files</td>
+		<td class="c4 xd2">路径用于证书撤销列表(CRL)文件</td>
+		</tr><tr>
+		<td class="c1">Enabled_auto_position</td>
+		<td class="c2">tinyint(1)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Indicates whether GTIDs will be used to retrieve events from the master.</td>
+		<td class="c4 xd2">表明GTIDs能否用于检索事件从主。</td>
+		</tr></tbody></table><a name="slave_relay_log_info"></a><table><caption>slave_relay_log_info(Relay Log Information | 翻译: 中继日志信息)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Number_of_lines</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Number of lines in the file or rows in the table. Used to version table definitions.</td>
+		<td class="c4 xd2">文件中的行数或表中的行。</td>
+		</tr><tr>
+		<td class="c1">Relay_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The name of the current relay log file.</td>
+		<td class="c4 xd2">电流继电器日志文件的名称。</td>
+		</tr><tr>
+		<td class="c1">Relay_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The relay log position of the last executed event.</td>
+		<td class="c4 xd2">最后执行事件的中继日志位置。</td>
+		</tr><tr>
+		<td class="c1">Master_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The name of the master binary log file from which the events in the relay log file were read.</td>
+		<td class="c4 xd2">掌握二进制日志文件的名称的事件中继日志文件被读取。</td>
+		</tr><tr>
+		<td class="c1">Master_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The master log position of the last executed event.</td>
+		<td class="c4 xd2">主日志位置的最后执行的事件。</td>
+		</tr><tr>
+		<td class="c1">Sql_delay</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">The number of seconds that the slave must lag behind the master.</td>
+		<td class="c4 xd2">的秒数,奴隶必须落后于主人。</td>
+		</tr><tr>
+		<td class="c1">Number_of_workers</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">工人数量</td>
+		</tr><tr>
+		<td class="c1">Id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1">Internal Id that uniquely identifies this record.</td>
+		<td class="c4 xd2">内部Id唯一地标识该记录。</td>
+		</tr></tbody></table><a name="slave_worker_info"></a><table><caption>slave_worker_info(Worker Information | 翻译: 员工信息)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Id</td>
+		</tr><tr>
+		<td class="c1">Relay_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">中继日志的名字</td>
+		</tr><tr>
+		<td class="c1">Relay_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">中继日志pos</td>
+		</tr><tr>
+		<td class="c1">Master_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主日志的名字</td>
+		</tr><tr>
+		<td class="c1">Master_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主日志pos</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_relay_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">检查点中继日志的名字</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_relay_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">检查点中继日志pos</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_master_log_name</td>
+		<td class="c2">text</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">检查点主日志的名字</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_master_log_pos</td>
+		<td class="c2">bigint(20) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主日志pos检查站</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_seqno</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">检查点seqno</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_group_size</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">检查点组大小</td>
+		</tr><tr>
+		<td class="c1">Checkpoint_group_bitmap</td>
+		<td class="c2">blob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">检查点组位图</td>
+		</tr></tbody></table><a name="slow_log"></a><table><caption>slow_log(Slow log | 翻译: 缓慢的日志)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">start_time</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">开始时间</td>
+		</tr><tr>
+		<td class="c1">user_host</td>
+		<td class="c2">mediumtext</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户主机</td>
+		</tr><tr>
+		<td class="c1">query_time</td>
+		<td class="c2">time</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">查询时间</td>
+		</tr><tr>
+		<td class="c1">lock_time</td>
+		<td class="c2">time</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">锁定时间</td>
+		</tr><tr>
+		<td class="c1">rows_sent</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">行了</td>
+		</tr><tr>
+		<td class="c1">rows_examined</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">行检查</td>
+		</tr><tr>
+		<td class="c1">db</td>
+		<td class="c2">varchar(512)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">db</td>
+		</tr><tr>
+		<td class="c1">last_insert_id</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最后插入id</td>
+		</tr><tr>
+		<td class="c1">insert_id</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">插入id</td>
+		</tr><tr>
+		<td class="c1">server_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">服务器id</td>
+		</tr><tr>
+		<td class="c1">sql_text</td>
+		<td class="c2">mediumtext</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">sql文本</td>
+		</tr><tr>
+		<td class="c1">thread_id</td>
+		<td class="c2">bigint(21) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">线程id</td>
+		</tr></tbody></table><a name="tables_priv"></a><table><caption>tables_priv(Table privileges | 翻译: 表的特权)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">Db</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Db</td>
+		</tr><tr>
+		<td class="c1">User</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户</td>
+		</tr><tr>
+		<td class="c1">Table_name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">表名</td>
+		</tr><tr>
+		<td class="c1">Grantor</td>
+		<td class="c2">char(77)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">MUL</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">委托人</td>
+		</tr><tr>
+		<td class="c1">Timestamp</td>
+		<td class="c2">timestamp</td>
+		<td class="c2">NO</td>
+		<td class="c3">CURRENT_TIMESTAMP</td>
+		<td class="c3"></td>		
+		<td class="c3">on update CURRENT_TIMESTAMP</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时间戳</td>
+		</tr><tr>
+		<td class="c1">Table_priv</td>
+		<td class="c2">set('Select','Insert','Update','Delete','Create','Drop','Grant','References','Index','Alter','Create View','Show view','Trigger')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">表我感到</td>
+		</tr><tr>
+		<td class="c1">Column_priv</td>
+		<td class="c2">set('Select','Insert','Update','References')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">列priv</td>
+		</tr></tbody></table><a name="time_zone"></a><table><caption>time_zone(Time zones | 翻译: 时区)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Time_zone_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3">auto_increment</td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时区id</td>
+		</tr><tr>
+		<td class="c1">Use_leap_seconds</td>
+		<td class="c2">enum('Y','N')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">使用闰秒</td>
+		</tr></tbody></table><a name="time_zone_leap_second"></a><table><caption>time_zone_leap_second(Leap seconds information for time zones | 翻译: 闰秒信息时区)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Transition_time</td>
+		<td class="c2">bigint(20)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">过渡时间</td>
+		</tr><tr>
+		<td class="c1">Correction</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">修正</td>
+		</tr></tbody></table><a name="time_zone_name"></a><table><caption>time_zone_name(Time zone names | 翻译: 时区名称)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Name</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">的名字</td>
+		</tr><tr>
+		<td class="c1">Time_zone_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时区id</td>
+		</tr></tbody></table><a name="time_zone_transition"></a><table><caption>time_zone_transition(Time zone transitions | 翻译: 时区转换)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Time_zone_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时区id</td>
+		</tr><tr>
+		<td class="c1">Transition_time</td>
+		<td class="c2">bigint(20)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">过渡时间</td>
+		</tr><tr>
+		<td class="c1">Transition_type_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">过渡类型id</td>
+		</tr></tbody></table><a name="time_zone_transition_type"></a><table><caption>time_zone_transition_type(Time zone transition types | 翻译: 时区转换类型)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Time_zone_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">时区id</td>
+		</tr><tr>
+		<td class="c1">Transition_type_id</td>
+		<td class="c2">int(10) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">过渡类型id</td>
+		</tr><tr>
+		<td class="c1">Offset</td>
+		<td class="c2">int(11)</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">抵消</td>
+		</tr><tr>
+		<td class="c1">Is_DST</td>
+		<td class="c2">tinyint(3) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">是DST</td>
+		</tr><tr>
+		<td class="c1">Abbreviation</td>
+		<td class="c2">char(8)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">缩写</td>
+		</tr></tbody></table><a name="user"></a><table><caption>user(Users and global privileges | 翻译: 全球用户和权限)<span style="float: right;"><a href="http://localhost:8000/#__top__">Top</a></span></caption><tbody><tr><th>字段名</th><th>数据类型</th><th>允许空值</th><th>默认值</th><th>索引类型</th><th>额外</th><th>备注</th><th>备注翻译</th></tr><tr>
+		<td class="c1">Host</td>
+		<td class="c2">char(60)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">主机</td>
+		</tr><tr>
+		<td class="c1">User</td>
+		<td class="c2">char(16)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3">PRI</td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">用户</td>
+		</tr><tr>
+		<td class="c1">Password</td>
+		<td class="c2">char(41)</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">密码</td>
+		</tr><tr>
+		<td class="c1">Select_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">选择我感到</td>
+		</tr><tr>
+		<td class="c1">Insert_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">插入priv</td>
+		</tr><tr>
+		<td class="c1">Update_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">更新我感到</td>
+		</tr><tr>
+		<td class="c1">Delete_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">删除我感到</td>
+		</tr><tr>
+		<td class="c1">Create_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建priv</td>
+		</tr><tr>
+		<td class="c1">Drop_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">我感到下降</td>
+		</tr><tr>
+		<td class="c1">Reload_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">重载priv</td>
+		</tr><tr>
+		<td class="c1">Shutdown_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">关闭priv</td>
+		</tr><tr>
+		<td class="c1">Process_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">过程我感到</td>
+		</tr><tr>
+		<td class="c1">File_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">文件我感到</td>
+		</tr><tr>
+		<td class="c1">Grant_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">格兰特priv</td>
+		</tr><tr>
+		<td class="c1">References_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">引用我感到</td>
+		</tr><tr>
+		<td class="c1">Index_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">指数priv</td>
+		</tr><tr>
+		<td class="c1">Alter_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">改变我感到</td>
+		</tr><tr>
+		<td class="c1">Show_db_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">显示db priv</td>
+		</tr><tr>
+		<td class="c1">Super_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">超级priv</td>
+		</tr><tr>
+		<td class="c1">Create_tmp_table_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建tmp表priv</td>
+		</tr><tr>
+		<td class="c1">Lock_tables_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">锁表priv</td>
+		</tr><tr>
+		<td class="c1">Execute_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">我感到执行</td>
+		</tr><tr>
+		<td class="c1">Repl_slave_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Repl奴隶priv</td>
+		</tr><tr>
+		<td class="c1">Repl_client_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">Repl客户priv</td>
+		</tr><tr>
+		<td class="c1">Create_view_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建视图priv</td>
+		</tr><tr>
+		<td class="c1">Show_view_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">显示视图priv</td>
+		</tr><tr>
+		<td class="c1">Create_routine_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建常规priv</td>
+		</tr><tr>
+		<td class="c1">Alter_routine_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">改变常规priv</td>
+		</tr><tr>
+		<td class="c1">Create_user_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建用户priv</td>
+		</tr><tr>
+		<td class="c1">Event_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">事件我感到</td>
+		</tr><tr>
+		<td class="c1">Trigger_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">触发我感到</td>
+		</tr><tr>
+		<td class="c1">Create_tablespace_priv</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">创建表空间priv</td>
+		</tr><tr>
+		<td class="c1">ssl_type</td>
+		<td class="c2">enum('','ANY','X509','SPECIFIED')</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">ssl类型</td>
+		</tr><tr>
+		<td class="c1">ssl_cipher</td>
+		<td class="c2">blob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">ssl密码</td>
+		</tr><tr>
+		<td class="c1">x509_issuer</td>
+		<td class="c2">blob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">x509发行人</td>
+		</tr><tr>
+		<td class="c1">x509_subject</td>
+		<td class="c2">blob</td>
+		<td class="c2">NO</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">x509主题</td>
+		</tr><tr>
+		<td class="c1">max_questions</td>
+		<td class="c2">int(11) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最大的问题</td>
+		</tr><tr>
+		<td class="c1">max_updates</td>
+		<td class="c2">int(11) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">马克斯更新</td>
+		</tr><tr>
+		<td class="c1">max_connections</td>
+		<td class="c2">int(11) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最大连接</td>
+		</tr><tr>
+		<td class="c1">max_user_connections</td>
+		<td class="c2">int(11) unsigned</td>
+		<td class="c2">NO</td>
+		<td class="c3">0</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">最大用户连接</td>
+		</tr><tr>
+		<td class="c1">plugin</td>
+		<td class="c2">char(64)</td>
+		<td class="c2">YES</td>
+		<td class="c3">mysql_native_password</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">插件</td>
+		</tr><tr>
+		<td class="c1">authentication_string</td>
+		<td class="c2">text</td>
+		<td class="c2">YES</td>
+		<td class="c3"></td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">验证字符串</td>
+		</tr><tr>
+		<td class="c1">password_expired</td>
+		<td class="c2">enum('N','Y')</td>
+		<td class="c2">NO</td>
+		<td class="c3">N</td>
+		<td class="c3"></td>		
+		<td class="c3"></td>
+		<td class="c4 xd1"></td>
+		<td class="c4 xd2">密码过期</td>
+		</tr></tbody></table></body></html>
